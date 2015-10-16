@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BootstrapPanel.cs" />
+    <Compile Include="Enuns.cs" />
     <Compile Include="HtmlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

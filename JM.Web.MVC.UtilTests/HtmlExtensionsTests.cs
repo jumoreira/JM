@@ -54,7 +54,7 @@ namespace JM.Web.MVC.UtilTests
         {
             string result = GetBooststrapTextBoxForWithStringProperty();
 
-            Assert.IsTrue(result.Contains("type=\"text\""), result);
+            Assert.IsTrue(result.Contains("type=\"Text\""), result);
         }
         [TestMethod()]
         public void BootstrapTextBoxForHaveInputWithPlaceholderTest()
@@ -68,7 +68,7 @@ namespace JM.Web.MVC.UtilTests
         {
             string result = GetBooststrapTextBoxForWithStringProperty();
 
-            Assert.AreEqual("<div class='form-group col-sm-1'><label for=\"Propriedade_Texto\">Propriedade Texto</label><strong class='text-danger'></strong><input id=\"PropertyString\" name=\"PropertyString\" placeholder=\"Propriedade Texto\" type=\"text\" value=\"Test\" /></div>", result);
+            Assert.AreEqual("<div class='form-group col-sm-1'><label for=\"Propriedade_Texto\">Propriedade Texto</label><strong class='text-danger'></strong><input id=\"PropertyString\" name=\"PropertyString\" placeholder=\"Propriedade Texto\" type=\"Text\" value=\"Test\" /></div>", result);
         }
         [TestMethod()]
         public void BootstrapTextBoxForHaveInputWithCustonHtmlAttributesTest()
@@ -82,11 +82,36 @@ namespace JM.Web.MVC.UtilTests
         public void BootstrapTextBoxForHaveInputAndNoUsePlaceholderTest()
         {
             var htmlHelper = MvcHelper.GetHtmlHelper(Model);
-            var result = htmlHelper.BootstrapTextBoxFor(i => i.PropertyString, 1, new { @class = "test" }, false).ToString();
+            var result = htmlHelper.BootstrapTextBoxFor(i => i.PropertyString, 1, new { @class = "test" }, addPlaceholder: false).ToString();
 
             Assert.IsFalse(result.Contains("placeholder"), result);
         }
+
+        [TestMethod()]
+        public void BootstrapTextBoxForInputTypeInt()
+        {
+            var htmlHelper = MvcHelper.GetHtmlHelper(Model);
+            var result = htmlHelper.BootstrapTextBoxFor(i => i.PropertyString, 1, BoxInputType.Number).ToString();
+
+            Assert.IsTrue(result.Contains("type=\"Number\""), result);
+        }
+        [TestMethod()]
+        public void BootstrapTextBoxForInputTypeDate()
+        {
+            var htmlHelper = MvcHelper.GetHtmlHelper(Model);
+            var result = htmlHelper.BootstrapTextBoxFor(i => i.PropertyString, 1, BoxInputType.Date).ToString();
+
+            Assert.IsTrue(result.Contains("type=\"Date\""), result);
+        }
+        [TestMethod()]
+        public void BootstrapTextBoxForInputTypePassword()
+        {
+            var htmlHelper = MvcHelper.GetHtmlHelper(Model);
+            var result = htmlHelper.BootstrapTextBoxFor(i => i.PropertyString, 1, BoxInputType.Password).ToString();
+
+            Assert.IsTrue(result.Contains("type=\"Password\""), result);
+        }
         #endregion
-                
+
     }
 }

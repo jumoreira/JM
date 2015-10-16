@@ -11,5 +11,9 @@ namespace JM.Examples.MVC.Models
         public string PropertyStringNoPlaceholder { get; set; }
         [Display(Name = "Propriedade Texto Com Placeholder")]
         public string PropertyStringWithPlaceholder { get; set; }
+        [Display(Name = "Propriedade Número")]
+        public int PropertyInt { get; set; }
+        [Display(Name = "Propriedade Data")]
+        public DateTime PropertyDate { get; set; }
     }
 }

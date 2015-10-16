@@ -10,17 +10,17 @@ namespace JM.Web.MVC.Util
 {
     public static class HtmlExtensions
     {
-        public static MvcHtmlString BootstrapTextBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, int size, object htmlAttributes, bool addPlaceholder = true)
+        public static MvcHtmlString BootstrapTextBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, int size, object htmlAttributes, BoxInputType type = BoxInputType.Text, bool addPlaceholder = true)
         {
             var dict = new RouteValueDictionary(htmlAttributes);
-            return htmlHelper.BootstrapTextBoxFor(expression, size, dict, addPlaceholder);
+            return htmlHelper.BootstrapTextBoxFor(expression, size, dict, type, addPlaceholder);
         }
-        public static MvcHtmlString BootstrapTextBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, int size, bool addPlaceholder = true)
+        public static MvcHtmlString BootstrapTextBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, int size, BoxInputType type = BoxInputType.Text, bool addPlaceholder = true)
         {
             var htmlAttributes = new Dictionary<string, object>();
-            return htmlHelper.BootstrapTextBoxFor(expression, size, htmlAttributes, addPlaceholder);
+            return htmlHelper.BootstrapTextBoxFor(expression, size, htmlAttributes, type, addPlaceholder);
         }
-        public static MvcHtmlString BootstrapTextBoxFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, int size, IDictionary<string, object> htmlAttributes, bool addPlaceholder = true)
+        public static MvcHtmlString BootstrapTextBoxFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, int size, IDictionary<string, object> htmlAttributes, BoxInputType type = BoxInputType.Text, bool addPlaceholder = true)
         {
             ModelMetadata metadata = ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData);
             string htmlFieldName = ExpressionHelper.GetExpressionText(expression);
@@ -30,6 +30,7 @@ namespace JM.Web.MVC.Util
             {
                 if (htmlAttributes == null)
                     htmlAttributes = new Dictionary<string, object>();
+                htmlAttributes.Add("type", type.ToString());
                 if (addPlaceholder)
                     htmlAttributes.Add("placeholder", labelText);
             }
@@ -44,6 +45,6 @@ namespace JM.Web.MVC.Util
             var close = "</div>";
 
             return MvcHtmlString.Create(begin + label + strongStart + validation + strongEnd + field + close);
-        }        
+        }
     }
 }
