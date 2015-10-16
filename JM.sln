@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB", "WEB", "{4E085894-1DEE-41E5-A17C-9E8BF991757A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.Web.MVC.Util", "JM.Web.MVC.Util\JM.Web.MVC.Util.csproj", "{F6F54C39-0F13-4990-90E4-541688477F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.Web.MVC.UtilTests", "JM.Web.MVC.UtilTests\JM.Web.MVC.UtilTests.csproj", "{65948B10-EB19-4428-AA9B-F1840BFD5514}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D78EE4B7-1713-4392-8C2A-578C0D15CDBE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6F54C39-0F13-4990-90E4-541688477F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F54C39-0F13-4990-90E4-541688477F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F54C39-0F13-4990-90E4-541688477F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F54C39-0F13-4990-90E4-541688477F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6F54C39-0F13-4990-90E4-541688477F3E} = {4E085894-1DEE-41E5-A17C-9E8BF991757A}
+		{65948B10-EB19-4428-AA9B-F1840BFD5514} = {D78EE4B7-1713-4392-8C2A-578C0D15CDBE}
 	EndGlobalSection
 EndGlobal
