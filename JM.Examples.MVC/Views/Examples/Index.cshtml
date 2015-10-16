@@ -1,0 +1,17 @@
+﻿@model JM.Examples.MVC.Models.Exemplo
+@using JM.Web.MVC.Util;
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+@using (Html.BeginForm("Index", "Examples"))
+{
+    using (new BootstrapPanel(Html.ViewContext, "TESTE"))
+    {
+        @Html.BootstrapTextBoxFor(i => i.PropertyString, 4, new { @class = "form-control input-sm" })
+        @Html.BootstrapTextBoxFor(i => i.PropertyStringWithPlaceholder, 4, new { @class = "form-control input-sm" })
+        @Html.BootstrapTextBoxFor(i => i.PropertyStringNoPlaceholder, 4, new { @class = "form-control input-sm" }, false)
+    }
+}
+<br />
+

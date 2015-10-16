@@ -87,23 +87,6 @@ namespace JM.Web.MVC.UtilTests
             Assert.IsFalse(result.Contains("placeholder"), result);
         }
         #endregion
-
-        #region Panel_Tests
-        [TestMethod()]
-        public void BootstrapPanelCompletedTest()
-        {
-            var htmlHelper = MvcHelper.GetHtmlHelper(Model);
-            var result = htmlHelper.BootstrapPanel("Test");
-
-            Assert.AreEqual(@"
-            <div class='panel panel-primary'>
-                <div class='panel-heading'>
-                    <h3 class='panel-title'>
-                        Test
-                    </h3>
-                </div>
-            </div>", result.ToString());
-        }
-        #endregion
+                
     }
 }

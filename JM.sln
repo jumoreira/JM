@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.Web.MVC.UtilTests", "JM.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D78EE4B7-1713-4392-8C2A-578C0D15CDBE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{53D22426-971F-40C0-89EB-FF11C81F4D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JM.Examples.MVC", "JM.Examples.MVC\JM.Examples.MVC.csproj", "{70315890-40E1-43BF-9E3E-4FFE136B7035}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65948B10-EB19-4428-AA9B-F1840BFD5514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70315890-40E1-43BF-9E3E-4FFE136B7035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70315890-40E1-43BF-9E3E-4FFE136B7035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70315890-40E1-43BF-9E3E-4FFE136B7035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70315890-40E1-43BF-9E3E-4FFE136B7035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F6F54C39-0F13-4990-90E4-541688477F3E} = {4E085894-1DEE-41E5-A17C-9E8BF991757A}
 		{65948B10-EB19-4428-AA9B-F1840BFD5514} = {D78EE4B7-1713-4392-8C2A-578C0D15CDBE}
+		{70315890-40E1-43BF-9E3E-4FFE136B7035} = {53D22426-971F-40C0-89EB-FF11C81F4D6D}
 	EndGlobalSection
 EndGlobal

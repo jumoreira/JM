@@ -1,5 +1,4 @@
-﻿using JM.Web.MVC.Util.Blocks;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -45,10 +44,6 @@ namespace JM.Web.MVC.Util
             var close = "</div>";
 
             return MvcHtmlString.Create(begin + label + strongStart + validation + strongEnd + field + close);
-        }
-        public static MvcHtmlString BootstrapPanel(this HtmlHelper htmlHelper, string title)
-        {
-            return MvcHtmlString.Create(new BootstrapPanel(htmlHelper.ViewContext, title).ToString());
-        }
+        }        
     }
 }
